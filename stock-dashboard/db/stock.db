@@ -1,1 +1,12 @@
+import pandas as pd
+import sqlite3
 
+# Read your CSV file
+df = pd.read_csv('data/stocks.csv')
+
+# Create SQLite DB and write data into a 'stocks' table
+conn = sqlite3.connect('db/stock.db')
+df.to_sql('stocks', conn, if_exists='replace', index=False)
+conn.close()
+
+print("SQLite DB created and filled in db/stock.db")
