@@ -1,1 +1,9 @@
-
+fastapi
+uvicorn
+pandas
+numpy
+yfinance
+sqlite3
+plotly
+jinja2
+requests
